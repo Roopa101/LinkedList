@@ -18,7 +18,9 @@ namespace LinkedListDay14
 
             //list.Pop();
             list.RemoveLastNode();
+            list.Search(30);
             list.Display();
+
             Console.ReadKey();
         }
     }
