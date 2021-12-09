@@ -77,6 +77,19 @@ namespace LinkedListDay14
             this.head = this.head.next;
             return this.head;
         }
+        internal Node RemoveLastNode()
+        {
+            if (head == null)
+                return null;
+            
+            Node temp = head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return head;
+        }
 
         internal void Display()
         {

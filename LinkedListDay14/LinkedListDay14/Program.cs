@@ -15,9 +15,9 @@ namespace LinkedListDay14
             list.AddAppend(56);
             list.AddAppend(70);
             list.InsertMiddle(30, 2);
-            //Remove first node 50 from the linked list
-            list.RemoveFirstNode();
-            
+
+            //list.Pop();
+            list.RemoveLastNode();
             list.Display();
             Console.ReadKey();
         }
