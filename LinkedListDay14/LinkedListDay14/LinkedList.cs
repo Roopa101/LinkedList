@@ -44,6 +44,31 @@ namespace LinkedListDay14
             }
             Console.WriteLine("{0} inserted into the Append linked list", node.data);
         }
+        public Node InsertMiddle(int data, int position)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid position");
+            else
+            {
+                Node temp = this.head;
+                while (position-- != 0)
+                {
+
+                    if (position == 1)
+                    {
+                        node.next = head.next;
+                        head.next = node;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Position out of range");
+            }
+            Console.WriteLine("{0} inserted into the Middle of linked list", node.data);
+            return head;
+        }
         internal void Display()
         {
             Node temp = this.head;

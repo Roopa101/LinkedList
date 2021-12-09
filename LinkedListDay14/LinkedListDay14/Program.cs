@@ -12,13 +12,11 @@ namespace LinkedListDay14
         {
             Console.WriteLine("Welcome to Datastructure");
             LinkedList list = new LinkedList();
-            //Appends the Nodes
             list.AddAppend(56);
-            list.AddAppend(30);
             list.AddAppend(70);
+            list.InsertMiddle(30, 2);
             list.Display();
             Console.ReadKey();
         }
     }
 }
-        
