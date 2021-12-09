@@ -11,7 +11,10 @@ namespace LinkedListDay14
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to LinkedList Program");
-            Console.ReadLine();
+            LinkedList linkedList = new LinkedList();
+
+            Console.ReadKey();
+            
         }
     }
 }
