@@ -17,18 +17,20 @@ namespace LinkedListDay14
             list.Add(56);
 
             list.Add(30);
+            list.Add(70);
 
+            list.Display();
 
             //insert the 40 new node to the given linked list
-            list.InsertAtParticularPosition(40, 3);
-            list.Add(70);
+            list.Search(40);
+            list.DeleteNodeAtParticularPosition(3);
 
 
 
             //list.Pop();
             // list.RemoveLastNode();
             //list.Search(30);
-            list.Display();
+            // list.Display();
 
             Console.ReadKey();
         }
