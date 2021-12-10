@@ -44,30 +44,32 @@ namespace LinkedListDay14
             }
             Console.WriteLine("{0} inserted into the Append linked list", node.data);
         }
-        public Node InsertMiddle(int data, int position)
+        public Node InsertAtParticularPosition(int data, int position)
         {
-            Node node = new Node(data);
-            if (position < 1)
-                Console.WriteLine("Invalid position");
-            else
+            Node newestNode = new Node(data);
+            if (this.head == null)
             {
-                Node temp = this.head;
-                while (position-- != 0)
-                {
-
-                    if (position == 1)
-                    {
-                        node.next = head.next;
-                        head.next = node;
-                        break;
-                    }
-                    temp = temp.next;
-                }
-                if (position != 1)
-                    Console.WriteLine("Position out of range");
+                return newestNode;
             }
-            Console.WriteLine("{0} inserted into the Middle of linked list", node.data);
-            return head;
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
+            //temp = prev
+            Node temp = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                temp = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = temp.next;
+            temp.next = newestNode;
+            return this.head;
         }
 
         internal Node RemoveFirstNode()

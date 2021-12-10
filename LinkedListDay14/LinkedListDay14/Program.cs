@@ -10,15 +10,24 @@ namespace LinkedListDay14
     {
         static void Main(string[] args)
         {
+            
+            
             Console.WriteLine("Welcome to Datastructure");
             LinkedList list = new LinkedList();
-            list.AddAppend(56);
-            list.AddAppend(70);
-            list.InsertMiddle(30, 2);
+            list.Add(56);
+
+            list.Add(30);
+
+
+            //insert the 40 new node to the given linked list
+            list.InsertAtParticularPosition(40, 3);
+            list.Add(70);
+
+
 
             //list.Pop();
-            list.RemoveLastNode();
-            list.Search(30);
+            // list.RemoveLastNode();
+            //list.Search(30);
             list.Display();
 
             Console.ReadKey();
