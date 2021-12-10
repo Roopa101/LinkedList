@@ -130,25 +130,42 @@ namespace LinkedListDay14
             temp.next = next;
             Size();
         }
-        internal void Size()
+        public int Size()
         {
-            Node temp = this.head;
             int count = 0;
+            Node temp = head;
             if (temp == null)
-            {
-                Console.WriteLine("LinkedList is empty");
-                return;
-            }
-            while (temp != null)
-            {
-                Console.Write(temp.data + " ");
-                temp = temp.next;
-                count++;
-            }
-            Console.WriteLine("\nLength of LinkedList is :-" + " " + count);
+                Console.WriteLine("Linked List is empty");
+            else
+                while (temp != null)
+                {
+                    temp = temp.next;
+                    count++;
+                }
+            return count;
         }
+        public void SortList()
+        {
+            Node first = head;
+            Node second;
+            int temp;
+            while (first != null)
+            {
+                second = first.next;
+                while (second != null)
+                {
+                    if (first.data.CompareTo(second.data) > 0)
+                    {
+                        temp = first.data;
+                        first.data = second.data;
+                        second.data = temp;
 
-
+                    }
+                    second = second.next;
+                }
+                first = first.next;
+            }
+        }
 
         internal void Display()
         {
